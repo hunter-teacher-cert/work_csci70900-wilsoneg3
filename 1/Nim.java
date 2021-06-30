@@ -37,6 +37,7 @@ public class Nim {
        
        //we need to add something here to break the loop if the player wins at this point
        System.out.print("Player AI: How many stones would you like to choose? ");
+       // this calls the random from the io. up top
        Random random = new Random();
        aiStones = random.nextInt(2) + 1;
        System.out.println(aiStones);

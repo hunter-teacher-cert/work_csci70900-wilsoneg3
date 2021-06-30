@@ -1,0 +1,49 @@
+1) Start by describing in words what ping and baffle do when they are invoked.
+
+-- When ping is invoked, the system returns a period
+
+-- When baffle is invoked, the system returns "wug" and then invokes ping.
+
+2) What is the output of the following program? Be precise about where there are spaces and where there are newlines.*
+
+No,I
+Wug
+.
+You wugga
+Wug
+.
+I
+Wug
+
+3) Draw a stack diagram that shows the state of the program the first time ping is invoked.*
+
+Main
+- zoop
+- baffle
+- ping 
+
+3) What happens if you invoke baffle(); at the end of the ping method? (We will see why in the next chapter.)
+
+This would create an infinte loop because the baffle would keep returning to the ping and the ping would keep running the baffle.  Rinse and repeat. Forever and ever. Amen.  
+
+public static void zoop() {
+    baffle();2
+    System.out.print("You wugga ");4
+    baffle();5
+}
+
+public static void main(String[] args) {
+    System.out.print("No, I ");1
+    zoop();2
+    System.out.print("I ");6
+    baffle();7
+}
+
+public static void baffle() {
+    System.out.print("wug");257
+    ping();
+}
+
+public static void ping() {
+    System.out.println(".");358
+}
