@@ -52,3 +52,5 @@ public class Nim {
 }
 
 //if total is less than 0, set it to 0
+
+
