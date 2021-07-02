@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class Nim2 {
+public class NimsFin {
 
   public static void main (String[] args) {
     //initialize and assign the variables
