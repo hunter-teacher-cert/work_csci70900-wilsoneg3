@@ -2,6 +2,7 @@ import java.io.*;
 import java.util.*;
 
 /**
+TEAM WORK: ERIC W., IULIAN, MARINA
    The Rules of Life:
    Survivals:
    * A cell with 2 or 3 living neighbours will survive for the next generation.
@@ -25,13 +26,16 @@ public class Cgol
    char [][]board = new char[rows][cols];
     for (int row=0; row<rows; row++){
       for (int col=0; col<cols; col++) {
-        board [row][col]='X';
+        board [row][col]='O';
              }
     }
+    board[2][3]='X';
+    board[1][3]='X';
+    board[3][3]='X';
+    board[2][2]='X';
+    board[2][4]='X';
    return board;
 }
-
-
 
   //print the board to the terminal
   public static void printBoard(char[][] board) {
@@ -45,30 +49,60 @@ public class Cgol
 
 
   }
-  /*
-
-
+ 
+/*
   //set cell (r,c) to val
-  //public static void setCell(char[][] board, int r, int c, char val){
+  public static void setCell(char[][] board, int r, int c, char val){
    // initialize the values,hard code r and c to have values of x inital screen
-   //board[r][c] = val;
+  board[r][c] = val;
   //}
 
+ */
 
   //return number of living neigbours of board[r][c]
   public static int countNeighbours(char[][] board, int r, int c) {
-   return 0;
+   int LivCellCounter=0;
+   if(board[r-1][c]=='X'){
+     LivCellCounter++;
+   }
+   if(board[r+1][c]=='X'){
+     LivCellCounter++;
+   }
+   if(board[r][c-1]=='X'){
+     LivCellCounter++;
+   }
+   if(board[r][c+1]=='X'){
+     LivCellCounter++;
+   }
+   System.out.print(LivCellCounter);
+   return LivCellCounter;
+   }
+ // || board[r+1][c] || board[r][c-1] || board [r][c+1]){
+     // LivCellCounter++
+
    // check the adjancent indices, i-1, i+1, j-1, j+1 and the use the counter ++
+  //}
+
+     //precond: given a board and a cell
+     //postcond: return next generation cell state based on CGOL rules
+     //(alive 'X', dead ' ')
+  
+   public static char getNextGenCell(char[][] board, int r, int c) {
+    int LivCellCounter;
+    LivCellCounter=countNeighbours(board,2,3);
+    System.out.println("Number of neighbouring living ceels: " + LivCellCounter); //To be removed later
+    for (r=0; r<board.length; r++){
+      for (c=0; c<board[r].length; c++){
+         if (board[r][c]=='X' && LivCellCounter==0){
+          board[r][c]='O';
+       }
+   }
+
+   }
+   return 'A';
   }
 
-     precond: given a board and a cell
-     postcond: return next generation cell state based on CGOL rules
-     (alive 'X', dead ' ')
-   public static char getNextGenCell(char[][] board,int r, int c) {
-   // 
-    return 'x';
-  }
-
+/*
   //generate new board representing next generation
  // public static char[][] generateNextBoard(char[][] board) {
       
@@ -78,6 +112,8 @@ public class Cgol
     char[][] board;
 	  board=createNewBoard(5, 5);
   	printBoard(board);
+    int LivCellCounter;
+   LivCellCounter=countNeighbours(board,2,3);
 	}
 
   
