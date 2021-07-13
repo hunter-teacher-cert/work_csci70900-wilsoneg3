@@ -20,10 +20,17 @@ public class SortDemoDriver {
 	
 	
 	/* part 3 test lines */
-	/*
-	  System.out.println(sd);
-	  sd.sort();
-	  System.out.println(sd);
-	*/
+	
+	  // System.out.println(sd);
+	  // sd.sort();
+	  // System.out.println(sd);
+	
+
+    System.out.println("Index of value 5: " + sd.linearSearch(5));
+    System.out.println("Index of value 6: " + sd.linearSearch(6));
+    System.out.println("Index of value 7: " + sd.linearSearch(7));
+    System.out.println("Index of value 8: " + sd.linearSearch(8));
+    System.out.println("Index of value 9: " + sd.linearSearch(9));
+    
     }
 }
