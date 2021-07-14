@@ -1,0 +1,24 @@
+ Assignment:
+    - Create a live-code experience by writing code (or using existing code) and annotating it with teacher-facing comments that would explain how to develop that code live.
+    - Include questions for students, when to pause, when to ask for predictions, purposeful mistakes, etc.
+ - Use whatever file format that is more convenient for you, but name the file **02_livecode** and put it in your **meth1** folder.
+
+ function setup() {
+  createCanvas(400, 400); // create a canvas
+	
+}
+function draw() {
+  background(220); // set the background color to 220
+	strokeWeight(7);
+	
+// 	Draw a point near the top-right corner of the canvas.
+	point(200, 200); // this is not in the middle on purpose 
+	
+
+// Draw a point in the middle of the canvas. 
+	point 
+// Draw a point near the bottom-left.
+// Draw a horizontal line, a vertical line, and a diagonal line anywhere.
+// Draw a line from the top-left corner to the bottom-right corner.
+	text("X: "+mouseX+" Y: "+mouseY, 20, 20); //this code tells you the x & y position of your mouse. You can use this information to place your points and lines correctly
+}
