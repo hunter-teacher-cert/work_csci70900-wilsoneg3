@@ -22,3 +22,7 @@ function draw() {
 // Draw a line from the top-left corner to the bottom-right corner.
 	text("X: "+mouseX+" Y: "+mouseY, 20, 20); //this code tells you the x & y position of your mouse. You can use this information to place your points and lines correctly
 }
+
+// feedback
+- build points first in way that will guide students towards horizontal, vertical, diagonal line connections later on
+- use color to make it more function
