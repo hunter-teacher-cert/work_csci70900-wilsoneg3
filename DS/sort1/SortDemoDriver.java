@@ -1,36 +1,53 @@
 import java.io.*;
 import java.util.*;
-
-public class SortDemoDriver {
+// victoria , eric, steph
+public class Driver{
     public static void main(String[] args) {
-
-	SortDemo sd = new SortDemo();
-	System.out.println(sd);
-
-	SortDemo sd2 = new SortDemo(20);
-	System.out.println(sd2);
-		
-	/* part 2 test lines */
-	int i;
-
-	i = sd.findSmallestIndex(4);
-	System.out.println("sd["+ i +"] = "+sd.get(i)+" : " + sd);
-	i = sd2.findSmallestIndex(4);
-	System.out.println("sd2["+ i + "] = "+sd2.get(i)+" : " + sd2);
-	
-	
-	/* part 3 test lines */
-	
-	  // System.out.println(sd);
-	  // sd.sort();
-	  // System.out.println(sd);
-	
-
-    System.out.println("Index of value 5: " + sd.linearSearch(5));
-    System.out.println("Index of value 6: " + sd.linearSearch(6));
-    System.out.println("Index of value 7: " + sd.linearSearch(7));
-    System.out.println("Index of value 8: " + sd.linearSearch(8));
-    System.out.println("Index of value 9: " + sd.linearSearch(9));
-    
+	Node n;
+	n = new Node();
+	n.setData("Eduardo");
+	Node n2 = new Node("Brian");
+	n.setNext(n2);
+	System.out.println(n);
+	System.out.println(n2);
+	System.out.println(n.getNext());
+	n.getNext().setNext(new Node("Steph"));
+	System.out.println(n2.getNext());
+	System.out.println(n.getNext().getNext());
+	//created the new nodes / list
+	Node L;	
+	L = new Node();
+	L.setData("a");
+	Node L2 = new Node("b");
+	Node L3 = new Node("c");
+	Node L4 = new Node("d");
+	System.out.println(L);
+	System.out.println(L2);
+	System.out.println(L3);
+	System.out.println(L4);
+	// Set up the order
+	L.setNext(L2);
+	L2.setNext(L3);
+	L3.setNext(L4);
+	System.out.println(L.getNext());
+	//insert x between b & c
+	Node x;
+	x = new Node("x");
+	x.setNext(L3);
+	L2.setNext(x);
+	System.out.print(L2.getNext() + "-->");
+	System.out.println(x.getNext());
+	//delete c from the mix
+	//to have x point to d. therefore we remove c.
+	x.setNext(L4);
+	System.out.print(L2.getNext() + "-->");
+	System.out.println(x.getNext() + "-->");
+	System.out.println("Final Link List" );
+	System.out.print(L + " -->" + L.getNext() + "-->" + L.getNext().getNext() + "-->" + L.getNext().getNext().getNext() + "-->" + L.getNext().getNext().getNext().getNext() );
+	// 1.Create a new  list that looks like:
+	//   L->"a"->"b"->"c"->"d"
+	// 2. Write the code to insert an "x"
+	//    between the b and the c
+	// 3. Write the code to delete the c
     }
 }
