@@ -1,19 +1,17 @@
-**I obviously don't really understand the markdown langauge and I apologize**
-
 # *NetLogo Day 1- SWBAT control and explain a NetLogo model of their choosing.*
 
 ## Direct Instruction: What is modeling?
 * models are constructs to help us attempt to better understand real-world systems and situations
 * "All models are wrong but some are useful." George E.P. Box
 
-## *Discussion* What industries, technologies, etc use models to benefit/ improve the world or to engage in commerce?
+## Discussion: What industries, technologies, etc use models to benefit/ improve the world or to engage in commerce?
 - Try to guide towards samples below
 * Weather - prediction
 * Flight Simulation - Training
 * Nuclear Arms Race - Strategy Development
 * Traffic Flow - Regulation 
 * Predator-Prey - Management
-**All the above have function of--> Explanation and understanding systems/ the world
+* All the above have function of--> Explanation and understanding systems/ the world
 
 ## Sample Model Walk Through: Wolf Sheep Predation
 * Explain why the Wolf/Sheep predation would be used, how beneficial
