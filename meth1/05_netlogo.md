@@ -1,15 +1,13 @@
 **I obviously don't really understand the markdown langauge and I apologize**
 
-*Consider a course where NetLogo is used as the primary programming language (or one of them). 
-
 # *NetLogo Day 1- SWBAT control and explain a NetLogo model of their choosing.*
 
-## What is modeling?- Direct instruction 
-- models are constructs to help us attempt to better understand real-world systems and situations
-- "All models are wrong but some are useful." George E.P. Box
+## Direct Instruction: What is modeling?
+* models are constructs to help us attempt to better understand real-world systems and situations
+* "All models are wrong but some are useful." George E.P. Box
 
-## Real world examples of how modeling can be used- what industries, technologies, etc use models to benefit/ improve the world or to engage in commerce?- Discussion, try to guide towards samples below
-Ex - Objective 
+## *Discussion* What industries, technologies, etc use models to benefit/ improve the world or to engage in commerce?
+- Try to guide towards samples below
 * Weather - prediction
 * Flight Simulation - Training
 * Nuclear Arms Race - Strategy Development
@@ -26,7 +24,7 @@ Ex - Objective
 * Controlling the View
 * Models Library Overview
 
-##Individual practice
+## Individual practice
 Pick a Model from the model library and attempt to explain the following:
 1) What is the name of the model?
 2) What happens when you change the buttons?
