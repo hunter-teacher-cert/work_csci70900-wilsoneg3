@@ -9,6 +9,13 @@ public class BSTree {
 	    root = null;
     }
 
+public void delete(int key){
+  // find the note that we want to delete
+  // and the node above it using piggybacking
+  // if the tree is empty
+  // manually insert the new node as the root
+}
+
   public void seed(){
 	TreeNode t;
   //the root is 10
@@ -70,20 +77,56 @@ public int insert(int key){
 */
 
 // traverse tree to print out every node
-private void traverse (TreeNode *current){
+private void preorderTraverse(TreeNode *current){
   if (current == null)
     return;
 
   // process the current node
   System.out.print(current.getData()+", ");
   // recursively print out left subtree
-  traverse(current.getLeft());
+  preorderTraverse(current.getLeft());
   // recursively print out the right subtree
-  traverse(current.getRight());
+  preorderTraverse(current.getRight());
+}
+public void preorderTraverse (){
+  preorderTraverse(root);
+  System.out.println();
 }
 
-public void traverse(){
-  traverse(root);
+private void postorderTraverse (TreeNode *current){
+  if (current == null)
+    return;
+
+  // process the current node
+  System.out.print(current.getData()+", ");
+  // recursively print out left subtree
+  postorderTraverse(current.getLeft());
+  // recursively print out the right subtree
+  postorderTraverse(current.getRight());
+}
+
+public void postorderTraverse(){
+  postorderTraverse(root);
+  System.out.println();
+  }
+}
+private void inorderTraverse (TreeNode *current){
+  if (current == null)
+    return;
+
+  // recursively print out left subtree
+  inorderTraverse(current.getLeft());
+
+  // process the current node
+  System.out.print(current.getData()+", ");
+
+  // recursively print out the right subtree
+  traverse3(current.getRight());
+}
+
+public void inorderTraverse(){
+  inorderTraverse(root);
+  System.out.println();
   }
 }
 
@@ -96,21 +139,18 @@ public int insert (int key){
     root = newNode;
     return;
   }
+
   TreeNode front = root; 
   TreeNode trailer = root;
+  // do piggyback loop
+  // until we either find the node or null
+  // if the key isn't present
 
-  while (front != null){
-    int frontValue=front.getData();
-    if (frontValue == key){
-      // if we are here it means the key is
-      // already in the tree so we can
-      // update this node in some way
-      // and then return
-      return;
-    } else if (frontValue < key){
+  while (front != null && front.getData() != key){
+    if (front.getData() < key){
       trailer = front;
       front = front.getRight();
-    } else {
+    } else 
       trailer = front;
       front = front.getLeft();
     }
@@ -123,4 +163,23 @@ if (key > trailer.getData()){
   trailer.setLeft(newNode);
 }
 }
+}
+// if key wasn't in the tree
+if (front == null){
+  return;
+}
+// if we get here
+// front points to node we want to delete
+// and trailer points to the one above it
+
+// case 1-- node we want to delete is a leaf
+if (front.getLeft() == null && front.getRight() == null) {
+  // repoint front' sparent to null
+} else if (true /*check to see if front has one child*/){
+  //repoint front parent to front child
+} else {
+  // front has two children
+  // 
+  // find node w largest
+
 }
