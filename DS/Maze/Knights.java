@@ -1,3 +1,5 @@
+// worked w Victoria, Stephannia, Laks, Alex, Julian
+
 import java.io.*;
 import java.util.*;
 
@@ -10,8 +12,9 @@ public class Knights{
     private int[][] board;
     private int rows = 5;
     private int cols = 5;
-    private int size=5;
-    private String clearScreen="^[[0;0H\n";
+    private int size= 5;
+    private String clearScreen="\033[H\033[2J";
+    //private String clearScreen="^[[0;0H\n";
 
     private void delay(int n)
     {
@@ -72,7 +75,7 @@ public class Knights{
 public boolean solve(int col,int row, int count){
   
 	boolean solved = false;
-  System.out.println("**********This is the count: "+count);
+ // System.out.println("**********This is the count: "+count);
 
 	// This should return true when we've solved the problem
 	// What should CHANGETHIS be?
@@ -80,8 +83,10 @@ public boolean solve(int col,int row, int count){
 	// here, when do we know when we're done?
 	// HINT: you have an nxn board and are done when you've visited
 	// every board location
-	if (count==(rows*cols)){
-	    System.out.println(this);
+	//if (count>(rows*cols))
+  // size of board - size of moat
+    if (count > 25){
+	   System.out.println(this);
 	    return true;
 	}
 
@@ -102,9 +107,9 @@ public boolean solve(int col,int row, int count){
 	// what do we put into the board
 	// Change CHANGETHIS
 	board[col][row]=count;
-
-	delay(200);
-	System.out.println(clearScreen+this);
+  //count ++; //added w L
+//	delay(200);
+//	System.out.println(clearScreen+this);
 
 
 	// Here we need to do try to do the 8 recursive calls
@@ -137,7 +142,7 @@ public boolean solve(int col,int row, int count){
   }
 
 	// Here we unset where we were for the backtracking
-	
+	// does this mean that it's printing out a new board?
 	board[col][row]=0;
 	return solved;
     }
