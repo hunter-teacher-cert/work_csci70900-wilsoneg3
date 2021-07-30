@@ -25,4 +25,4 @@ function draw() {
 
 // feedback
 - build points first in way that will guide students towards horizontal, vertical, diagonal line connections later on
-- use color to make it more function
+- use color to make it more functional
