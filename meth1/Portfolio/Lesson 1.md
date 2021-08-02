@@ -2,6 +2,7 @@
 
 **SWBAT: Use system variables to manipulate code across the canvas**
 
+
 ### Launch
 - Create an ellipse that is perfectly centered in the canvas
 - if you complete this task within 2 minutes, add a rectangle with the same width and height behind the circle
@@ -17,7 +18,7 @@ function draw() {
 	ellipse(200,200,100,100) // desired ellipse behind
 }>
 
-###Width and Height: System Variables
+### Width and Height: System Variables
 Width and height are System Variables.
 
 System variables are placeholders of information that are already coded into the system.  That means you don't have to declare or initialize them- only use them.
