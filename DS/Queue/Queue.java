@@ -34,7 +34,7 @@ public class Queue {
 
   }//end isEmpty
 
-    //add value to the back/tail of the linked list
+    //add  to the tail of ll
 public void enqueue(String data){
   Node node = new Node(data);
   if (tail != null){
@@ -71,13 +71,11 @@ public String toString(){
     String result = "";
     while (currentNode != null){
       result = result + currentNode + " <- ";
-      // this is like i=i+1 is for arrays
-      // but for linked lists
       currentNode = currentNode.getNext();
     }
     result = result + "tail";
     return result;
 
   }
-
+}
 //https://www.youtube.com/watch?v=wjI1WNcIntg
