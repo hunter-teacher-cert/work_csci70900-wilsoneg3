@@ -3,36 +3,35 @@ import java.util.*;
 
 public class Node {
 
-  private String name;
+  private String data;
   private Node next;
 
   public Node() {
-    name = "";
+    data = "";
     next = null;
   }//default constructor declaring node
 //you use this node to add node values
   public Node(String value) {
 
-    name = value;
+    data = value;
     next = null;
   }//constructor(vale) declaring node
-  /
   //us/ e this one to add value and point to the next node
   public Node(String value, Node next) {
-    name = value;
+    data = value;
     this.next = next;
   }//constructor(value, next) declaring node
 
   public void setData(String value) {
-    name = value;
+    data = value;
   }//setData, assign string val (apply data to node)
 
   public void setNext(Node n) {
     next = n;
   }//setNext, sets pointer
 
-  public String getValue() {
-    return name;
+  public String getData() {
+    return data;
   }//end getValue, returns the value of the string
 
   public Node getNext() {
@@ -40,7 +39,7 @@ public class Node {
   }//getNext
 
   public String toString() {
-    return name;
+    return data;
   }//toString
 
 }//class Node
